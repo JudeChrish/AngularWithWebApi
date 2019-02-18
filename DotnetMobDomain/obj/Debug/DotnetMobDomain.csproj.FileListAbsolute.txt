@@ -1,0 +1,13 @@
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\DotnetMobDomain.dll.config
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\DotnetMobDomain.dll
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\DotnetMobDomain.pdb
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\EntityFramework.dll
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\EntityFramework.xml
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\obj\Debug\DotnetMobDomain.Migrations.updatedatabase.resources
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\obj\Debug\DotnetMobDomain.csproj.GenerateResource.Cache
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\obj\Debug\DotnetMobDomain.csproj.CoreCompileInputs.cache
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\obj\Debug\DotnetMobDomain.dll
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\obj\Debug\DotnetMobDomain.pdb
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobDomain\obj\Debug\DotnetMobDomain.csprojResolveAssemblyReference.cache
