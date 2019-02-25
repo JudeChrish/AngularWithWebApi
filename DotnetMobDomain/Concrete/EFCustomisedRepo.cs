@@ -14,6 +14,7 @@ namespace DotnetMobDomain.Concrete
         public void DeleteEmployee(Employee employee)
         {
             dBMSSqlContext.Employees.Remove(employee);
+            dBMSSqlContext.SaveChanges();
         }
 
         public IEnumerable<Employee> GetAllEmployees()
@@ -21,10 +22,9 @@ namespace DotnetMobDomain.Concrete
             return dBMSSqlContext.Employees.Where(e => e.EmpStatus != 0);
         }
 
-        public Employee GetEmployeeById(int EmpIdentity)
+        public IQueryable<Employee> GetEmployeeById(int EmpIdentity)
         {
-
-            return (Employee)dBMSSqlContext.Employees.Select(e => e.EmpId == EmpIdentity);
+            return dBMSSqlContext.Employees.Where(e => e.EmpId == EmpIdentity);
         }
 
         public void SaveEmployee(Employee emp)
@@ -46,6 +46,5 @@ namespace DotnetMobDomain.Concrete
             dBMSSqlContext.Employees.Add(employee);
             dBMSSqlContext.SaveChanges();
         }
-
     }
 }
