@@ -64,3 +64,6 @@ C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMob
 C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobAPI\obj\Debug\DotnetMobAPI.csproj.CoreCompileInputs.cache
 C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobAPI\obj\Debug\DotnetMobAPI.dll
 C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobAPI\obj\Debug\DotnetMobAPI.pdb
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobAPI\bin\System.Web.Cors.dll
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobAPI\bin\System.Web.Http.Cors.dll
+C:\Personal\test_systems\AngularAndWebApi\DotnetMobWebApi\DotnetMobAPI\DotnetMobAPI\bin\System.Web.Http.Cors.xml

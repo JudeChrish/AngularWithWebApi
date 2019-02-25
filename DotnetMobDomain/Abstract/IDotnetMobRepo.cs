@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DotnetMobDomain.Concrete;
+using System.Linq;
 
 namespace DotnetMobDomain.Abstract
 {
@@ -7,7 +8,7 @@ namespace DotnetMobDomain.Abstract
     {
         IEnumerable<Employee> GetAllEmployees();
 
-        Employee GetEmployeeById(int EmpIdentity);
+        IQueryable<Employee> GetEmployeeById(int EmpIdentity);
 
         void SaveEmployee(Employee employee);
 

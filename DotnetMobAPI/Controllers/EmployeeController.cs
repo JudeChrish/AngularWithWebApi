@@ -25,7 +25,7 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpGet]
-        public Employee GetSpecificEmp(int Id)
+        public IQueryable<Employee> GetSpecificEmp(int Id)
         {
           return  dotnetMobRepo.GetEmployeeById(Id);
         }
@@ -46,13 +46,28 @@ namespace DotnetMobAPI.Controllers
                 httpResponseMessage.StatusCode = HttpStatusCode.NotAcceptable;
             }
             return httpResponseMessage;
-
+            
         }
 
         [HttpPut]
-        public void UpdateSelectedEmployee(Employee em)
+        public IHttpActionResult UpdateSelectedEmployee(int id, Employee em)
         {
-            dotnetMobRepo.SaveEmployee(em);
+            try
+            {
+                dotnetMobRepo.UpdateEmployee(em);
+            }
+            catch(Exception)
+            {                
+                if(dotnetMobRepo.GetEmployeeById(id).Count() == 0)
+                {
+                    return NotFound();
+                }
+                else
+                { 
+                    throw;
+                }
+            }
+            return StatusCode(HttpStatusCode.NoContent);          
         }
 
         [HttpDelete]
