@@ -14,6 +14,6 @@ namespace DotnetMobDomain.Abstract
 
         void UpdateEmployee(Employee employee);
 
-        void DeleteEmployee(Employee employee);
+        void DeleteEmployee(int empId);
     }
 }

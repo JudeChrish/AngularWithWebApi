@@ -11,9 +11,11 @@ namespace DotnetMobDomain.Concrete
     {
         OfficeDBMSSqlContext dBMSSqlContext = new OfficeDBMSSqlContext();
 
-        public void DeleteEmployee(Employee employee)
+        public void DeleteEmployee(int empId)
         {
-            dBMSSqlContext.Employees.Remove(employee);
+            Employee emp = new Employee() { EmpId = empId};            
+            dBMSSqlContext.Employees.Attach(emp);
+            dBMSSqlContext.Employees.Remove(emp);
             dBMSSqlContext.SaveChanges();
         }
 
@@ -38,8 +40,8 @@ namespace DotnetMobDomain.Concrete
             //this is an update
             Employee emp = new Employee();
             emp = dBMSSqlContext.Employees.Find(employee.EmpId);
-            emp.EmpFName = employee.EmpLName;
-            emp.EmpLName = employee.EmpFName;
+            emp.EmpFName = employee.EmpFName;
+            emp.EmpLName = employee.EmpLName;
             emp.Department = employee.Department;
             emp.EmpStatus = employee.EmpStatus;
 
