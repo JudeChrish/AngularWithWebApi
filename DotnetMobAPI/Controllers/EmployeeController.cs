@@ -71,17 +71,9 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpDelete]
-        //this method is being depprived of access by IIS Express. Therefore, I proceed the delete with POST request after much reaserch
         public void DeleteSelectedEmp(int emp)
         {
             dotnetMobRepo.DeleteEmployee(emp);
-        }
-
-        [HttpPost]
-        [Route("DeleteEmp")]
-        public void DeleteEmp([FromBody] string EmpId)
-        {
-            dotnetMobRepo.DeleteEmployee(int.Parse(EmpId));
         }
 
     }
