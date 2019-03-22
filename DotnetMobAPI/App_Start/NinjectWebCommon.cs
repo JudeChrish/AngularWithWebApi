@@ -39,6 +39,7 @@ namespace DotnetMobAPI.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IDotnetMobRepo>().ToMethod(ctx => new EFCustomisedRepo());
+            kernel.Bind<ICustomer>().ToMethod(ctx => new CustomerRepo());
         }
     }
 }

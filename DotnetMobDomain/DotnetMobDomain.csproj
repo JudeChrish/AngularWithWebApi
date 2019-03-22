@@ -47,13 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICustomer.cs" />
     <Compile Include="Abstract\IDotnetMobRepo.cs" />
+    <Compile Include="Concrete\Customer.cs" />
+    <Compile Include="Concrete\CustomerRepo.cs" />
     <Compile Include="Concrete\EFCustomisedRepo.cs" />
     <Compile Include="Concrete\Employee.cs" />
     <Compile Include="Concrete\OfficeDBMSSqlContext.cs" />
     <Compile Include="Migrations\201901161557209_update database.cs" />
     <Compile Include="Migrations\201901161557209_update database.Designer.cs">
       <DependentUpon>201901161557209_update database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903220910028_Customer.cs" />
+    <Compile Include="Migrations\201903220910028_Customer.Designer.cs">
+      <DependentUpon>201903220910028_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901161557209_update database.resx">
       <DependentUpon>201901161557209_update database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903220910028_Customer.resx">
+      <DependentUpon>201903220910028_Customer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
