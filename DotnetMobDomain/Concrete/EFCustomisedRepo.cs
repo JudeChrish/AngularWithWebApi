@@ -44,8 +44,7 @@ namespace DotnetMobDomain.Concrete
             emp.EmpLName = employee.EmpLName;
             emp.Department = employee.Department;
             emp.EmpStatus = employee.EmpStatus;
-
-            dBMSSqlContext.Employees.Add(employee);
+            //dBMSSqlContext.Employees.Add(emp);
             dBMSSqlContext.SaveChanges();
         }
     }
