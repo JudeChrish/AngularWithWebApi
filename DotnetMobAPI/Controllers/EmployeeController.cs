@@ -9,28 +9,39 @@ using DotnetMobDomain.Concrete;
 
 namespace DotnetMobAPI.Controllers
 {
+    [RoutePrefix("api/employee")]
     public class EmployeeController : ApiController
     {
         private IDotnetMobRepo dotnetMobRepo;
-
+        
         public EmployeeController(IDotnetMobRepo dotnetMob )
         {
             dotnetMobRepo = dotnetMob;
         }
 
         [HttpGet]
+        [Route("SakreeyaOkkomaSewakayoEwanna")]
         public IEnumerable<Employee> GetAllTheEmployees()
         {
             return dotnetMobRepo.GetAllEmployees();
         }
 
         [HttpGet]
+        [Route("MemaAnkayataAdalaSewakayawaEwanna/{Id}")]
         public IQueryable<Employee> GetSpecificEmp(int Id)
         {
           return  dotnetMobRepo.GetEmployeeById(Id);
         }
 
+        [HttpGet]
+        [Route("AkreeyaSiyalumaSewakayanwaEwanna")]
+        public IQueryable<Employee> GetCancelledEmployees()
+        {
+            return dotnetMobRepo.GetCancelledEmployeesRepo();
+        }
+
         [HttpPost]
+        [Route("MemaSewakayawaEthulathKranna")]
         public HttpResponseMessage SaveSelectedEmployee(Employee em)
         {
             HttpResponseMessage httpResponseMessage = new HttpResponseMessage();
@@ -50,6 +61,7 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpPut]
+        [Route("SewakayawaYawathkaleenaKaranna/{id}")]
         public IHttpActionResult UpdateSelectedEmployee(int id, Employee em)
         {
             try
@@ -71,9 +83,11 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("MemaSewakayawaAkreeyaKaranna/{emp}")]
         public void DeleteSelectedEmp(int emp)
         {
-            dotnetMobRepo.DeleteEmployee(emp);
+            //dotnetMobRepo.DeleteEmployee(emp);
+            dotnetMobRepo.MarkEmployeeAsDelete(emp);
         }
 
     }

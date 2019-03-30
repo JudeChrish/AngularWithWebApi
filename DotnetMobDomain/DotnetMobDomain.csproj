@@ -51,6 +51,7 @@
     <Compile Include="Abstract\IDotnetMobRepo.cs" />
     <Compile Include="Concrete\Customer.cs" />
     <Compile Include="Concrete\CustomerRepo.cs" />
+    <Compile Include="Concrete\DomainEnums.cs" />
     <Compile Include="Concrete\EFCustomisedRepo.cs" />
     <Compile Include="Concrete\Employee.cs" />
     <Compile Include="Concrete\OfficeDBMSSqlContext.cs" />

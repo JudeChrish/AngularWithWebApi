@@ -13,5 +13,6 @@ namespace DotnetMobDomain.Concrete
         public string CustAddress1 { get; set; }
         public string CustAddress2 { get; set; }
         public string CustAddress3 { get; set; }
+        public int CustStatus { get; set; }
     }
 }

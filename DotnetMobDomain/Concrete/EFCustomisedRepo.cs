@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DotnetMobDomain.Abstract;
+using DotnetMobDomain.Concrete;
 
 namespace DotnetMobDomain.Concrete
 {
@@ -13,20 +14,33 @@ namespace DotnetMobDomain.Concrete
 
         public void DeleteEmployee(int empId)
         {
-            Employee emp = new Employee() { EmpId = empId};            
+            Employee emp = new Employee() { EmpId = empId };
             dBMSSqlContext.Employees.Attach(emp);
             dBMSSqlContext.Employees.Remove(emp);
             dBMSSqlContext.SaveChanges();
         }
 
+        public void MarkEmployeeAsDelete(int empid)
+        {
+            Employee emp = new Employee();
+            emp = dBMSSqlContext.Employees.Find(empid);
+            emp.EmpStatus = (int)DomainEnums.EmployeeStatus.Delete;
+            dBMSSqlContext.SaveChanges();
+        }
+
         public IEnumerable<Employee> GetAllEmployees()
         {
-            return dBMSSqlContext.Employees.Where(e => e.EmpStatus != 0);
+            return dBMSSqlContext.Employees.Where(e => e.EmpStatus == (int)DomainEnums.EmployeeStatus.Active);
         }
 
         public IQueryable<Employee> GetEmployeeById(int EmpIdentity)
         {
             return dBMSSqlContext.Employees.Where(e => e.EmpId == EmpIdentity);
+        }
+
+        public IQueryable<Employee> GetCancelledEmployeesRepo()
+        {
+            return dBMSSqlContext.Employees.Where(e => e.EmpStatus == (int)DomainEnums.EmployeeStatus.Delete);
         }
 
         public void SaveEmployee(Employee emp)
