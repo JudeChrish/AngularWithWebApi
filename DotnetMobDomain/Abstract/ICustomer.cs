@@ -14,5 +14,7 @@ namespace DotnetMobDomain.Abstract
         void SaveCustomer(Customer customer);
         void UpdateCustomer(Customer customer);
         void DeleteCustomer(int CusId);
+
+        void MarkAsDelete(int CusId);
     }
 }

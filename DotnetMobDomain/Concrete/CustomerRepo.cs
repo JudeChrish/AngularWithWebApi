@@ -27,6 +27,14 @@ namespace DotnetMobDomain.Concrete
             return  dBMSSqlContext.Customers.Where(c => c.CustId == CusId);
         }
 
+        public void MarkAsDelete(int CusId)
+        {
+            Customer customer = new Customer();
+            customer = dBMSSqlContext.Customers.Find(CusId);
+            customer.CustStatus = (int)DomainEnums.CustomerStatus.Delete;
+            dBMSSqlContext.SaveChanges();
+        }
+
         public void SaveCustomer(Customer customer)
         {
             dBMSSqlContext.Customers.Add(customer);

@@ -9,11 +9,14 @@ namespace DotnetMobDomain.Abstract
         IEnumerable<Employee> GetAllEmployees();
 
         IQueryable<Employee> GetEmployeeById(int EmpIdentity);
+        IQueryable<Employee> GetCancelledEmployeesRepo();
 
         void SaveEmployee(Employee employee);
 
         void UpdateEmployee(Employee employee);
 
         void DeleteEmployee(int empId);
+
+        void MarkEmployeeAsDelete(int empId);
     }
 }
