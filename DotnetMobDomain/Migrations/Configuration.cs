@@ -1,6 +1,7 @@
 namespace DotnetMobDomain.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -18,6 +19,7 @@ namespace DotnetMobDomain.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
         }
     }
 }
