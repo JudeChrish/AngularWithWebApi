@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace DotnetMobAPI.Controllers
 {
+    [RoutePrefix("api/customer")]
     public class CustomerController : ApiController
     {
         private ICustomer customerRepo;
@@ -18,18 +19,21 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpGet]
+        [Route("getAllTheCustomers")]
         public IEnumerable<Customer> GetAllCustomers()
         {
             return customerRepo.GetAllCustomers();
         }
 
         [HttpGet]
+        [Route("getSpecificCustomer/{customerId}")]
         public IQueryable<Customer> GetCustomerById(int customerId)
         {
             return customerRepo.GetCustomerById(customerId);
         }
 
         [HttpPost]
+        [Route("SaveNewCustomer")]
         public HttpResponseMessage SaveCustomer(Customer customer)
         {
             HttpResponseMessage response = new HttpResponseMessage();
@@ -49,6 +53,7 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpPut]
+        [Route("UpdateSelectedCustomer/{id}")]
         public IHttpActionResult UpdateSelectedCustomer(int id, Customer cm)
         {
             try
@@ -70,6 +75,7 @@ namespace DotnetMobAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("DeleteSelectedCustomer/{cusID}")]
         public void DeleteCustomer(int cusID)
         {
             customerRepo.DeleteCustomer(cusID);

@@ -49,12 +49,14 @@
   <ItemGroup>
     <Compile Include="Abstract\ICustomer.cs" />
     <Compile Include="Abstract\IDotnetMobRepo.cs" />
+    <Compile Include="Abstract\ISupplier.cs" />
     <Compile Include="Concrete\Customer.cs" />
     <Compile Include="Concrete\CustomerRepo.cs" />
     <Compile Include="Concrete\DomainEnums.cs" />
     <Compile Include="Concrete\EFCustomisedRepo.cs" />
     <Compile Include="Concrete\Employee.cs" />
     <Compile Include="Concrete\OfficeDBMSSqlContext.cs" />
+    <Compile Include="Concrete\Supplier.cs" />
     <Compile Include="Migrations\201901161557209_update database.cs" />
     <Compile Include="Migrations\201901161557209_update database.Designer.cs">
       <DependentUpon>201901161557209_update database.cs</DependentUpon>
@@ -62,6 +64,10 @@
     <Compile Include="Migrations\201903220910028_Customer.cs" />
     <Compile Include="Migrations\201903220910028_Customer.Designer.cs">
       <DependentUpon>201903220910028_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904031714531_Added_Cus_Property.cs" />
+    <Compile Include="Migrations\201904031714531_Added_Cus_Property.Designer.cs">
+      <DependentUpon>201904031714531_Added_Cus_Property.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903220910028_Customer.resx">
       <DependentUpon>201903220910028_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904031714531_Added_Cus_Property.resx">
+      <DependentUpon>201904031714531_Added_Cus_Property.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

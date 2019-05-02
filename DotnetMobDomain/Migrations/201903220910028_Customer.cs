@@ -17,7 +17,7 @@ namespace DotnetMobDomain.Migrations
                         CustAddress1 = c.String(),
                         CustAddress2 = c.String(),
                         CustAddress3 = c.String(),
-                    })
+                })
                 .PrimaryKey(t => t.CustId);
             
         }
